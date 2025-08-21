@@ -1,5 +1,6 @@
 from pymongo import MongoClient
 import pandas as pd
+import os
 
 class MongoFetcher:
     """
@@ -7,7 +8,7 @@ class MongoFetcher:
     Connection details are hardcoded (No time to implement flexibility)
     """
     def __init__(self):
-        self.uri = "mongodb+srv://IRGC:iraniraniran@iranmaldb.gurutam.mongodb.net/"
+        self.uri = os.getenv("MONGO_URI")
         self.db_name = "IranMalDB"
         self.col_name = "tweets"
         self.client = MongoClient(self.uri)

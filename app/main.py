@@ -11,4 +11,4 @@ def get_tweets():
     rarest_word, sentiment, weapons_detected
     """
     df = dm.load_and_process()
-    return df.to_json()
+    return df.to_dict(orient='records')

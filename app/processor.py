@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
@@ -8,7 +9,8 @@ class TextProcessor:
     def __init__(self, df: pd.DataFrame):
         self.df = df.copy()
         self.sid = SentimentIntensityAnalyzer()
-        with open(r"C:\Users\danie\PycharmProjectsc\hostile-tweets-ex\data\weapons.txt", "r") as f:
+        weapons_path = os.getenv("WEAPONS_FILE", "data/weapons.txt")
+        with open(weapons_path, "r") as f:
             self.weapons_list = [line.strip().lower() for line in f]
 
     def process(self):
