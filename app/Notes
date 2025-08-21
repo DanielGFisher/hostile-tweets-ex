@@ -1,0 +1,12 @@
+ - fetcher.py - MongoFetcher includes hardcoding
+which is not flexible but due to time
+limitations I didnt wish to stay on it for
+a long period of time and as such I moved on
+
+- manager.py - DataManager.load_and_process has duplications
+of code and could be called unnecessary but I wanted to
+make it a reusable class (More generic)
+
+
+
+

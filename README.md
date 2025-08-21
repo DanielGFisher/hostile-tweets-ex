@@ -1,0 +1,1 @@
+Searches for hostile tweets using paramaters (Rarest word, weapons and sentiment) using MongoDB, FastAPI, 
